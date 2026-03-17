@@ -9,10 +9,11 @@
     font-family: -apple-system, sans-serif;
 }
 :root {
-    --bg-color: #fff;
-    --snd-bg-color: #d5fdf9;
-    --text-color: #000;
-    --main-color:#544d6f;
+    --bg-color: #1e1e2f;         /* dark background */
+    --snd-bg-color: #2b2c3a;     /* card and section backgrounds */
+    --text-color: #e0e0e0;       /* normal text */
+    --main-color: rgb(52, 160, 167);          /* buttons, highlights, icons */
+    --accent-color: #6a5acd;     /* secondary accent/purple */
 }
 /*Define "Global Variables" Here */
 
@@ -33,6 +34,51 @@ section {
 }
 
 /* header section code */
+/**/
+.logo, .navbar a, #menu-icon {
+    color: #0ef; /* main-color for header */
+}
+
+.home-content h3, .home-content h1 {
+    color: #fff; /* headings bright white */
+}
+
+.services-container .services-box, .projects-box {
+    background: var(--snd-bg-color);
+    border-color: transparent;
+    color: #e0e0e0;
+}
+
+.services-container .services-box:hover, .projects-box:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.btn {
+    background: var(--main-color);
+    color: #1e1e2f; /* contrast text on cyan */
+}
+
+.btn:hover {
+    background: var(--accent-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.footer, .contact {
+    /* background: var(--snd-bg-color); */
+    color: #e0e0e0;
+}
+
+.footer .social a {
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+.footer .social a:hover {
+    background: var(--main-color);
+    color: #1e1e2f;
+}
+/**/
+
 
 .header { 
     position: fixed;
@@ -244,11 +290,13 @@ span{
 }
 
 .services-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem;
+    text-align: center;
+}
+.services-box h3 {
+    margin-top: 0.5rem;
 }
 
 .services-container .services-box {
@@ -271,9 +319,6 @@ span{
     color: var(--main-color);
 }
 
-.services-box h3{
-    font-size: 2.6rem;
-}
 
 .services-box p {
     font-size: 1.6rem;
