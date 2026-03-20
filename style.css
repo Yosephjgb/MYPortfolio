@@ -329,7 +329,7 @@ span{
 
 .projects {
     background: #1f242d;
-    padding: 5rem 9%;
+    padding: 10rem 9% 5rem;
 }
 
 .projects .heading {
@@ -346,11 +346,17 @@ span{
 
 .projects-box {
     background: #323946;
-    padding: 2rem;
+    padding: 4rem;
     border-radius: 1.5rem;
     text-align: center;
     border: 2px solid transparent;
     transition: 0.3s ease;
+}
+.projects-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .projects-box:hover {
@@ -461,6 +467,92 @@ span{
     text-align: center;
     font-size: 16px;
     color: var(--text-color);
+}
+
+/*Modal section */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    overflow-y: auto; /* 🔥 THIS FIXES CUT CONTENT */
+}
+
+/* Modal Box */
+.modal-content {
+    background: #1e1e2f;
+    margin: 5% auto;
+    padding: 3rem;
+    width: 85%;
+    max-width: 900px; /* cleaner width */
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.modal-content p {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+.modal-content h1 {
+    margin-bottom: 2rem;
+}
+
+.modal-content h2,h3 {
+    margin-top: 3rem;
+    color: #0ef;
+}
+
+/* Section spacing */
+.modal-section {
+    margin-top: 3rem;
+}
+
+/* Videos layout */
+.modal-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.modal-videos video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Images layout */
+.modal-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.modal-images img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.modal-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Close button */
+.close {
+    float: right;
+    font-size: 3rem;
+    cursor: pointer;
 }
 
 /* Responsive Design Code */

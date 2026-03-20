@@ -145,41 +145,107 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <h2 class="heading">My <span>Projects</span></h2>
-        <div class="projects-container">
-            <div class="projects-box">
-                <h3>Unreal Engine Game Project</h3>
-                <p>
-                    Currently developing a 3D game using Unreal Engine. 
-                    Working on player movement, camera systems, and gameplay mechanics using Blueprint scripting. 
-                    Focused on performance optimization and creating smooth, interactive gameplay.
-                </p>
-            </div>
-            <div class="projects-box">
-                <h3>Portfolio Website</h3>
-                <p>
-                    Designed and developed a responsive personal portfolio using HTML, CSS, and JavaScript 
-                    to showcase my skills, projects, and progress as a developer.
-                </p>
-            </div>
+    
+<section class="projects" id="projects">
+    <h2 class="heading">My <span>Projects</span></h2>
+
+    <div class="projects-container">
+
+        <!-- Unreal Engine Project -->
+        <div class="projects-box">
+            <h3>Unreal Engine Game Project</h3>
+            <img src="assets/unreal_screenshot.png" alt="Unreal Game Screenshot" class="project-img">
+            <p>
+                Developing a 3D game using Unreal Engine. Blueprint mechanics, player movement, and interactive environments.
+            </p>
+            <button class="btn" onclick="openModal()">View Details</button>
+ </div>
+        <!-- Gaming Hub Project -->
+        <div class="projects-box">
+            <h3>Gaming Hub</h3>
+            <img src="assets/Gaming-hub.png" alt="Gaming Hub Screenshot" class="project-img">
+            <p>
+                Built a platform for discovering and reviewing games. Implemented interactive UI with JavaScript.
+            </p>
+            <a href="https://github.com/Yosephjgb/Typing-game" class="btn" target="_blank">View Repo</a>
         </div>
-    </section>
+
+        <!-- Native React Project -->
+        <div class="projects-box">
+            <h3>Native React App</h3>
+            <img src="assets/reactapp.png" alt="React Native Project Screenshot" class="project-img">
+            <p>
+                Developed a cross-platform mobile app with React Native. Features dynamic content and offline support.
+            </p>
+            <a href="https://github.com/Yosephjgb/ReactNativeApp" class="btn" target="_blank">View Repo</a>
+        </div>
+</div>
+   
+</section>
+
+<!-- Modal Section -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h1>Unreal Engine Game Project</h1>
+
+    <!-- Videos -->
+    <h2>Videos</h2>
+
+    <div class="modal-videos">
+
+      <div>
+        <h3>Gameplay</h3>
+        <video controls>
+          <source src="assets/gameplay.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div>
+        <h3>Process</h3>
+        <video controls>
+          <source src="assets/Process.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+
+    <!-- Images -->
+    <h2>Images</h2>
+
+    <div class="modal-images">
+      <img src="assets/unreal1.png">
+      <img src="assets/unreal2.png">
+      <img src="assets/unreal3.png">
+    </div>
+
+    <!-- Description -->
+    <p>
+      This project focuses on 3D gameplay mechanics using Unreal Engine.
+      Implemented player movement, camera systems, and interactive environments
+      using Blueprint scripting. Also explored performance optimization and
+      real-time rendering techniques.
+    </p>
+
+  </div>
+</div>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" name="Email" placeholder="Email Address">
-            </div>
-            <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-            </div>
-            <textarea name="message" cols="30" rows="10" placeholder="Your message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
+<form action="mailto:cjadaleon@gmail.com" method="post" enctype="text/plain">
+    <div class="input-box">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+    </div>
+    <div class="input-box">
+        <input type="tel" name="phone" placeholder="Phone Number">
+    </div>
+    <textarea name="message" cols="30" rows="10" placeholder="Your message" required></textarea>
+    <input type="submit" value="Send Message" class="btn">
+</form>
     </section>
 
     <!-- Footer Section -->

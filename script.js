@@ -18,3 +18,11 @@ const typed = new Typed('.multiple-text', {
       backDelay: 1200,
       loop: true,
     });
+
+    function openModal() {
+    document.getElementById("projectModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("projectModal").style.display = "none";
+}
