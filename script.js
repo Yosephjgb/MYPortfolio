@@ -19,7 +19,7 @@ const typed = new Typed('.multiple-text', {
       loop: true,
     });
 
-    function openModal() {
+function openModal() {
     document.getElementById("projectModal").style.display = "block";
 }
 
