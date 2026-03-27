@@ -478,6 +478,7 @@ span{
     margin-top: 10px;
 }
 
+
 /* Footer Section Code */
 
 .footer {
@@ -700,5 +701,15 @@ html {
 @media (max-width: 617px) {
     html {
         font-size: 50%;
+    }
+}
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        max-width: 100%;
     }
 }
