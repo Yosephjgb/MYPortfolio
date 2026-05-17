@@ -291,19 +291,20 @@ span{
 
 .services-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
     text-align: center;
 }
 .services-box h3 {
     margin-top: 0.5rem;
+    font-size: 2rem;
 }
 
 .services-container .services-box {
     flex: 1 1 30rem;
     background: var(--snd-bg-color);
-    padding: 6rem 2rem 6rem;
-    border-radius: 2rem;
+    padding: 3.5rem 2rem;
+    border-radius: 0.8rem;
     text-align: center;
     border: 0.3rem solid var(--bg-color);
     transition: 0.3s ease;
@@ -321,8 +322,10 @@ span{
 
 
 .services-box p {
-    font-size: 1.6rem;
-    margin: 1rem 0 3rem;
+    font-size: 1.45rem;
+    line-height: 1.6;
+    margin: 1rem 0 0;
+    color: #cfcfcf;
 }
 
 /* Projects Section */
